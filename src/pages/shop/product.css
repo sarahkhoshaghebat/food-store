@@ -1,0 +1,12 @@
+.img-card{
+    border-radius: 10px;
+}
+
+.card {
+    border-radius :20px;
+}
+
+.count-card{
+    color: #c0392b ;
+    font-size: 20px;
+}
