@@ -1,0 +1,23 @@
+.cart-items-count {
+    padding-left: 9px;
+    padding-right: 9px;
+    background: #ff0000;
+    border-radius: 9px;
+    color: #fff;
+    vertical-align: top;
+    font-size: 12px;
+    padding: 0 5px;
+    margin-left: 0px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius:9px;
+}
+
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffcc00;  
+  }
+  
