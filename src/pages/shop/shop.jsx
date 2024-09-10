@@ -1,12 +1,12 @@
 import React from "react";
 import { PRODUCTS } from "../../data/products";
 import { Product } from "./product";
-import { Menu } from "../../components/menu";
+import { Menu } from "../../components/menu/menu";
 
 export const Shop = () => {
   return (
     <React.Fragment>
-      <div className="container p-3">
+      <div className="container p-3 mb-5">
         <div className="row">
           {/* تنظیم اندازه ستون‌ها برای نمایش در اندازه‌های مختلف */}
           <div className="col-md-9 col-sm-12">

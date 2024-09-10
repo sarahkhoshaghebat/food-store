@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Shop } from "./pages/shop/shop";
 import { Cart } from "./pages/cart/cart";
-import { Nav } from "./components/nav";
+import { Nav } from "./components/nav/nav";
 import { ShopContextProvider } from "./context/shopContext";
 import{RestaurantInformation} from "./components/Restaurant information"
 import { Burger } from "./components/burger";

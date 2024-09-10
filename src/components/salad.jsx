@@ -1,7 +1,7 @@
 import React from "react";
 import { PRODUCTS } from "../data/products";
 import { Product } from "../pages/shop/product";
-import { Menu } from "../components/menu";
+import { Menu } from "../components/menu/menu";
 
 export const Salad =() =>{
   const saladProducts = PRODUCTS.filter((product) =>
