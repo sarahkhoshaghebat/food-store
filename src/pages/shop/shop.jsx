@@ -8,20 +8,16 @@ export const Shop = () => {
     <React.Fragment>
       <div className="container p-3 mb-5">
         <div className="row">
-          {/* تنظیم اندازه ستون‌ها برای نمایش در اندازه‌های مختلف */}
-          <div className="col-md-9 col-sm-12">
+          {/* منو در سمت چپ یا بالای صفحه */}
+          <div className="col-md-3 text-end">
+            <Menu />
+          </div>
+          {/* بخش محصولات در سمت راست یا زیر منو */}
+          <div className="col-md-9">
             <div className="row">
               {PRODUCTS.map((productData) => (
                 <Product key={productData.id} data={productData} />
               ))}
-            </div>
-          </div>
-          {/* منوی کناری */}
-          <div className="col-md-3 col-sm-12 text-end">
-            <div className="row">
-              <div className="col-12 p-0">
-                <Menu />
-              </div>
             </div>
           </div>
         </div>

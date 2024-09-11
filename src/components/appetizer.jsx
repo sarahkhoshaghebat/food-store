@@ -13,15 +13,15 @@ export const Appetizer = () => {
     <React.Fragment>
       <div className="container p-3 mb-5">
         <div className="row">
+          <div className=" col-lg-3 col-md-4 text-end">
+            <Menu />
+          </div>
           <div className="col-lg-9 col-md-8">
             <div className="row">
               {appetizerProducts.map((productData) => (
                 <Product key={productData.id} data={productData} />
               ))}
             </div>
-          </div>
-          <div className="col-lg-3 col-md-4 text-end">
-            <Menu />
           </div>
         </div>
       </div>
