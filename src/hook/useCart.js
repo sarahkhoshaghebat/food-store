@@ -34,10 +34,15 @@ export const UseCart = () => {
         }))
     }
 
+    const checkout =() => {
+        const paymentGatewayURL = "https://your-payment-gateway.com/checkout";
+        window.location.href = paymentGatewayURL;
+    }
+
     const deleteCart = ()=> {
         setCartItems([]);
         localStorage.removeItem('add-to-cart')
-        localStorage.clear()    }
+        localStorage.clear()}
 
-    return {cartItems, addToCart, removeFromCart,deleteCart}
+    return {cartItems, addToCart, removeFromCart,deleteCart,checkout}
 }

@@ -4,7 +4,7 @@ import { PRODUCTS } from "../../data/products";
 import { Product } from "../shop/product";
 
 export const Cart = () => {
-  const { cartItems, deleteCart,checkout } = useContext(ShopContext);
+  const { cartItems, deleteCart, checkout } = useContext(ShopContext);
 
   const hasItemsInCart = cartItems && cartItems.some((item) => item.count > 0);
   return (
@@ -18,20 +18,31 @@ export const Cart = () => {
                 if (cartItems?.some((i) => i.id === p.id && i.count > 0)) {
                   return <Product key={p.id} data={p} />;
                 }
-                return null; 
+                return null;
               })}
             </div>
           </div>
         </div>
         {hasItemsInCart && (
           <div className="row justify-content-center mt-4 mb-5">
+            <div className="row mb-5">
+              <div className="col-12">
+                <h4>مبلغ قابل پرداخت : </h4>
+              </div>
+            </div>
             <div className="col-6 col-md-3">
-              <button className="btn btn-outline-success w-100 mb-3" onClick={checkout}>
+              <button
+                className="btn btn-outline-success w-100 mb-3"
+                onClick={checkout}
+              >
                 تکمیل فرآیند خرید
               </button>
             </div>
             <div className="col-6 col-md-3">
-              <button className="btn btn-outline-danger w-100 mb-3" onClick={deleteCart}>
+              <button
+                className="btn btn-outline-danger w-100 mb-3"
+                onClick={deleteCart}
+              >
                 حذف سبد خرید
               </button>
             </div>
