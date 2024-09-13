@@ -7,24 +7,7 @@
     color: #c0392b !important;
     text-decoration: none !important;
   }
-  
 
-  @media (max-width: 768px) {
-    .sideBar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      color: green;
-      display: block;
-      overflow: auto;
-      margin: 0;
-    }
-    .menu-item{
-      width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    }
-  }
   
 
   

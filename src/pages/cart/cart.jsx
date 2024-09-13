@@ -4,7 +4,7 @@ import { PRODUCTS } from "../../data/products";
 import { Product } from "../shop/product";
 
 export const Cart = () => {
-  const { cartItems, deleteCart } = useContext(ShopContext);
+  const { cartItems, deleteCart,checkout } = useContext(ShopContext);
 
   const hasItemsInCart = cartItems && cartItems.some((item) => item.count > 0);
   return (
@@ -26,7 +26,7 @@ export const Cart = () => {
         {hasItemsInCart && (
           <div className="row justify-content-center mt-4 mb-5">
             <div className="col-6 col-md-3">
-              <button className="btn btn-outline-success w-100 mb-3" onClick={deleteCart}>
+              <button className="btn btn-outline-success w-100 mb-3" onClick={checkout}>
                 تکمیل فرآیند خرید
               </button>
             </div>
