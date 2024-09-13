@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
+import * as bootstrap from 'bootstrap';
 import "./nav.css";
 
 export const Nav = () => {
