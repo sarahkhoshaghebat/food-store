@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
 import { PRODUCTS } from "../../data/products";
 import { Product } from "../shop/product";
@@ -6,18 +6,17 @@ import React from "react";
 
 export const Cart = () => {
   const { cartItems = [], deleteCart, checkout } = useContext(ShopContext);
-  const parsePrice = priceString => parseFloat(priceString.replace(/,/g, ''));
+  const parsePrice = (priceString) => parseFloat(priceString.replace(/,/g, ""));
 
   const totalItems = cartItems.reduce((total, item) => {
     return total + item.count;
   }, 0);
-  
+
   const totalPrice = cartItems.reduce((total, item) => {
-    const product = PRODUCTS.find(p => p.id === item.id);
+    const product = PRODUCTS.find((p) => p.id === item.id);
     const productPrice = product ? parsePrice(product.price) : 0;
-    return total + (productPrice * item.count);
+    return total + productPrice * item.count;
   }, 0);
-  
 
   const hasItemsInCart = cartItems && cartItems.some((item) => item.count > 0);
 
@@ -41,7 +40,7 @@ export const Cart = () => {
           <div className="row justify-content-center mt-4 mb-5">
             <div className="row mb-5">
               <div className="col-12">
-                <h4>تعداد کل اقلام  :{totalItems} </h4>
+                <h4>تعداد کل اقلام :{totalItems} </h4>
               </div>
             </div>
             <div className="row mb-5">
